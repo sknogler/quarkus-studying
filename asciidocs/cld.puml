@@ -1,0 +1,16 @@
+@startuml
+
+class Student{
+    name: String
+    yob: String
+    room: Room
+}
+
+class Room{
+    roomNr: int
+    name: String
+}
+
+Room "1" --> "*" Student: contains >
+
+@enduml
