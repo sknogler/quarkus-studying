@@ -30,4 +30,23 @@ public class Student extends PanacheEntityBase {
     @Cascade(PERSIST)
     @ManyToOne
     public Room room;
+
+    public Student() {
+    }
+
+    public Student(String name, int yob, Room room) {
+        this.name = name;
+        this.yob = yob;
+        this.room = room;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", yob=" + yob +
+                ", room=" + room +
+                '}';
+    }
 }
